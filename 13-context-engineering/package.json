@@ -1,0 +1,19 @@
+{
+  "name": "@ai-series/13-context-engineering",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "context-demo": "tsx src/context-demo.ts",
+    "adversarial-verify": "tsx src/adversarial-verify.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0"
+  }
+}

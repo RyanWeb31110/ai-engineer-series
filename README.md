@@ -67,7 +67,7 @@ pnpm sampling    # 采样参数对比
 | 10 | MCP 协议：工具集成的统一标准 | — | 📝 |
 | 11 | 动手写一个 MCP Server | — | 📝 |
 | 12 | A2A：让多个 Agent 组成团队 | — | 📝 |
-| 13 | Context Engineering：在有限空间里装最多价值 | — | 📝 |
+| 13 | Context Engineering：在有限空间里装最多价值 | `context-demo.ts` / `adversarial-verify.ts` | ✅ |
 | 14 | 用 Next.js 16 + Vercel AI SDK 搭一个 AI 应用 | — | 📝 |
 | 15 | AI 应用的监控与评估：LangFuse + RAGAS | — | 📝 |
 | 16 | Guardrails：给 AI 装上安全护栏 | — | 📝 |
