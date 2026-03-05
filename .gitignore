@@ -1,0 +1,35 @@
+# 依赖
+node_modules/
+.pnpm-store/
+__pycache__/
+.venv/
+
+# 构建产物
+dist/
+.next/
+.turbo/
+out/
+
+# 环境变量（含密钥，绝不提交）
+.env
+.env.local
+.env.*.local
+
+# 编辑器
+.DS_Store
+.vscode/settings.json
+.idea/
+
+# 日志
+logs/
+*.log
+npm-debug.log*
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+
+# Python
+*.pyc
+*.pyo
+*.egg-info/
