@@ -20,13 +20,16 @@ ai-engineer-series/
 ├── 09-langgraph-agent/
 ├── 10-mcp-intro/
 ├── 11-mcp-server/
-├── 12-a2a/
-├── 13-context-engineering/
-├── 14-fullstack-app/    # 完整 AI 应用（Next.js 16 + Vercel AI SDK）
-├── 15-llmops/
-├── 16-guardrails/
-├── 17-cost-control/
-└── 18-ai-saas/          # 完��� AI SaaS 架构
+├── 12-plugin/           # Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI
+├── 13-skills/           # Agent Skills：用自然语言给 Agent 注入专业能力
+├── 14-integration-comparison/  # MCP、Plugin、Skills：三种集成方式怎么选
+├── 15-a2a/
+├── 16-context-engineering/
+├── 17-fullstack-app/    # 完整 AI 应用（Next.js + Vercel AI SDK）
+├── 18-llmops/
+├── 19-guardrails/
+├── 20-cost-control/
+└── 21-ai-saas/          # 完整 AI SaaS 架构
 ```
 
 ---
@@ -66,13 +69,16 @@ pnpm sampling    # 采样参数对比
 | 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | — | 📝 |
 | 10 | MCP 协议：工具集成的统一标准 | — | 📝 |
 | 11 | 动手写一个 MCP Server | — | 📝 |
-| 12 | A2A：让多个 Agent 组成团队 | — | 📝 |
-| 13 | Context Engineering：在有限空间里装最多价值 | `context-demo.ts` / `adversarial-verify.ts` | ✅ |
-| 14 | 用 Next.js 16 + Vercel AI SDK 搭一个 AI 应用 | — | 📝 |
-| 15 | AI 应用的监控与评估：LangFuse + RAGAS | — | 📝 |
-| 16 | Guardrails：给 AI 装上安全护栏 | — | 📝 |
-| 17 | 成本控制：Prompt Caching 和模型路由 | — | 📝 |
-| 18 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | — | 📝 |
+| 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | — | 📝 |
+| 13 | Agent Skills：用自然语言给 Agent 注入专业能力 | — | 📝 |
+| 14 | MCP、Plugin、Skills：三种集成方式怎么选 | — | 📝 |
+| 15 | A2A：让多个 Agent 组成团队 | — | 📝 |
+| 16 | Context Engineering：在有限空间里装最多价值 | `context-demo.ts` / `adversarial-verify.ts` | ✅ |
+| 17 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | — | 📝 |
+| 18 | AI 应用的监控与评估：LangFuse + RAGAS | — | 📝 |
+| 19 | Guardrails：给 AI 装上安全护栏 | — | 📝 |
+| 20 | 成本控制：Prompt Caching 和模型路由 | — | 📝 |
+| 21 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | — | 📝 |
 
 ---
 

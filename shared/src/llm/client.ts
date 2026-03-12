@@ -10,7 +10,26 @@ function getAnthropic(): Anthropic {
   if (!_anthropic) {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) throw new Error('Missing ANTHROPIC_API_KEY environment variable')
-    _anthropic = new Anthropic({ apiKey })
+    const baseURL = process.env.ANTHROPIC_BASE_URL
+
+    // 中转站通常由 Cloudflare 代理，需过滤 SDK 的指纹 header，只保留必要的鉴权和内容 header
+    const customFetch = baseURL
+      ? (url: RequestInfo | URL, init?: RequestInit) => {
+          const allowed = new Set(['authorization', 'x-api-key', 'anthropic-version', 'content-type', 'content-length'])
+          const src = new Headers(init?.headers ?? {})
+          const clean = new Headers()
+          for (const [k, v] of src.entries()) {
+            if (allowed.has(k)) clean.set(k, v)
+          }
+          return fetch(url, { ...init, headers: clean })
+        }
+      : undefined
+
+    _anthropic = new Anthropic({
+      apiKey,
+      ...(baseURL ? { baseURL } : {}),
+      ...(customFetch ? { fetch: customFetch } : {}),
+    })
   }
   return _anthropic
 }
@@ -19,13 +38,14 @@ function getOpenAI(): OpenAI {
   if (!_openai) {
     const apiKey = process.env.OPENAI_API_KEY
     if (!apiKey) throw new Error('Missing OPENAI_API_KEY environment variable')
-    _openai = new OpenAI({ apiKey })
+    const baseURL = process.env.OPENAI_BASE_URL
+    _openai = new OpenAI({ apiKey, ...(baseURL ? { baseURL } : {}) })
   }
   return _openai
 }
 
 /**
- * 通过模型名前缀自动识别提供商
+ * 通过模型名前缀自动识别提供商。
  * claude-* → anthropic，其余 → openai
  */
 function detectProvider(model: string): Provider {

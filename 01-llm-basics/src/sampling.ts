@@ -38,19 +38,19 @@ const PROMPT = '用一句话描述量子纠缠'
 const EXPERIMENTS: Array<{ label: string; config: LLMConfig }> = [
   {
     label: 'Greedy (temperature=0)',
-    config: { model: MODELS.CLAUDE_HAIKU, maxTokens: 100, temperature: 0 },
+    config: { model: MODELS.GPT5_CODEX, maxTokens: 100, temperature: 0 },
   },
   {
     label: 'Balanced (temperature=0.7)',
-    config: { model: MODELS.CLAUDE_HAIKU, maxTokens: 100, temperature: 0.7 },
+    config: { model: MODELS.GPT5_CODEX, maxTokens: 100, temperature: 0.7 },
   },
   {
     label: 'Creative (temperature=1.2)',
-    config: { model: MODELS.CLAUDE_HAIKU, maxTokens: 100, temperature: 1.2 },
+    config: { model: MODELS.GPT5_CODEX, maxTokens: 100, temperature: 1.2 },
   },
   {
     label: 'Top-p only (temperature=1, top_p=0.1)',
-    config: { model: MODELS.CLAUDE_HAIKU, maxTokens: 100, temperature: 1, topP: 0.1 },
+    config: { model: MODELS.GPT5_CODEX, maxTokens: 100, temperature: 1, topP: 0.1 },
   },
 ]
 

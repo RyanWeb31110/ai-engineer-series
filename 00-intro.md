@@ -22,7 +22,7 @@ Prompt、RAG、Agent、MCP、A2A、ReAct、Embedding、向量数据库、Functio
 
 | | AI 工程师 | ML 工程师 |
 |--|-----------|-----------|
-| 核心工作 | 用预训练模型构建应用 | 研究和训练��型本身 |
+| 核心工作 | 用预训练模型构建应用 | 研究和训练模型本身 |
 | 技能重点 | 集成、编排、部署、产品化 | 数学、统计、模型架构 |
 | 日常 | 写 Prompt、搭 RAG、做 Agent | 跑实验、调超参、写论文 |
 | 门槛 | 软件工程基础 + AI 知识 | 深度学习理论 + 数学基础 |
@@ -105,7 +105,7 @@ Prompt、RAG、Agent、MCP、A2A、ReAct、Embedding、向量数据库、Functio
 
 **Structured Output / JSON Mode**：通过约束解码强制模型输出合法 JSON，是工程化 AI 的关键能力。主流 LLM 都支持。
 
-**reasoning_effort**：2026 年关键参数，控���推理模型（o3、Claude Opus/Sonnet 4.6 Extended Thinking）的思考深度，直接影响延迟和成本。
+**reasoning_effort**：2026 年关键参数，控制推理模型（o3、Claude Opus/Sonnet 4.6 Extended Thinking）的思考深度，直接影响延迟和成本。
 
 ### 模型训练与优化（了解级别）
 
@@ -133,7 +133,7 @@ Prompt、RAG、Agent、MCP、A2A、ReAct、Embedding、向量数据库、Functio
 
 **System Prompt**：在对话开始前设定 AI 角色、能力边界、输出格式的持久化指令层。是最重要的 Prompt 技巧，决定了 AI 的整体行为模式。
 
-**Few-shot**：在 Prompt 里给 2–8 个输入/输出示例，让模型学会你想要的格式和风格。比单纯描述需求效果好���多。
+**Few-shot**：在 Prompt 里给 2–8 个输入/输出示例，让模型学会你想要的格式和风格。比单纯描述需求效果好很多。
 
 **Chain of Thought（CoT）**：让模型在给出最终答案前，先把推理过程写出来。加一句「请一步一步思考」就能触发，对复杂推理任务提升显著。
 
@@ -177,7 +177,7 @@ Prompt、RAG、Agent、MCP、A2A、ReAct、Embedding、向量数据库、Functio
 
 ```python
 # 传统方式：手动写提示字符串，反复调整措辞
-prompt = "请分析以下文���的情感..."
+prompt = "请分析以下文本的情感..."
 
 # DSPy 方式：声明签名，自动优化
 class SentimentAnalysis(dspy.Signature):
@@ -300,7 +300,7 @@ RAG 已经从 2023 年的「简单向量检索 + LLM」进化为更复杂的系�
 
 **HyDE（假设性文档嵌入）**：先让模型生成假想答案，再用该答案的向量检索真实文档，解决查询与文档向量空间不对齐的问题。
 
-**RAG-Fusion**：���成多个子查询并行检索，用 RRF 算法融合结果，提升召回质量。
+**RAG-Fusion**：生成多个子查询并行检索，用 RRF 算法融合结果，提升召回质量。
 
 **GraphRAG**（微软提出）：构建实体关系图，支持复杂多跳推理查询，适合知识密集型场景。
 
@@ -434,7 +434,7 @@ Agent      Agent       Agent
 | 解决问题 | 工具集成标准化 | 多 Agent 协作标准化 |
 | 类比 | 给人配一套工具 | 给人配一个团队 |
 
-两��互补，实际架构中往往同时使用。
+两者互补，实际架构中往往同时使用。
 
 ---
 
@@ -537,7 +537,7 @@ AI 输出是概率性的，不能只靠肉眼判断质量。
 | 对话限制 | NeMo Guardrails | NVIDIA，Colang 语言定义规则，防过度授权/工具滥用 |
 | PII 检测脱敏 | Presidio | 微软开源，GDPR / EU AI Act 合规（主要规则 2026-08-02 全面适用） |
 | Prompt 注入防御 | 自定义 + Lakera Guard | 检测并阻断覆盖系统指令的攻击 |
-| 机密计算 | Intel TDX / AMD SEV | 高合规场景（金融/医��），确保推理在可信执行环境中完成 |
+| 机密计算 | Intel TDX / AMD SEV | 高合规场景（金融/医疗），确保推理在可信执行环境中完成 |
 
 ### Context Engineering
 
@@ -756,13 +756,16 @@ Phase 4（第 8 周起）：生产 + 全栈
 | 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | Agent 框架 |
 | 10 | MCP 协议：工具集成的统一标准 | MCP 原理与生态 |
 | 11 | 动手写一个 MCP Server | MCP 开发实战 |
-| 12 | A2A：让多个 Agent 组成团队 | A2A 协议 / Multi-Agent |
-| 13 | Context Engineering：在有限空间里装最多价值 | Context 管理 |
-| 14 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | 全栈集成 |
-| 15 | AI 应用的监控与评估：LangFuse + RAGAS | Observability + Eval |
-| 16 | Guardrails：给 AI 装上安全护栏 | 安全工程 |
-| 17 | 成本控制：Prompt Caching 和模型路由 | 成本优化 |
-| 18 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | 综合实战 |
+| 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | Plugin 开发 / OpenAPI Schema |
+| 13 | Agent Skills：用自然语言给 Agent 注入专业能力 | Skills 设计 / 行为指令包 |
+| 14 | MCP、Plugin、Skills：三种集成方式怎么选 | 集成方案对比 / 选型决策 |
+| 15 | A2A：让多个 Agent 组成团队 | A2A 协议 / Multi-Agent |
+| 16 | Context Engineering：在有限空间里装最多价值 | Context 管理 |
+| 17 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | 全栈集成 |
+| 18 | AI 应用的监控与评估：LangFuse + RAGAS | Observability + Eval |
+| 19 | Guardrails：给 AI 装上安全护栏 | 安全工程 |
+| 20 | 成本控制：Prompt Caching 和模型路由 | 成本优化 |
+| 21 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | 综合实战 |
 
 ---
 

@@ -10,6 +10,7 @@
 - **风格**：实战为主，讲清原理，有代码有项目
 - **平台**：微信公众号
 - **节奏**：跟随学习进度，学完即写
+- **交付方式**：每个章节同步产出两个产物——**公众号文章**（讲清原理和思路）+ **配套代码**（可运行的实战示例，放在对应章节目录）
 
 ---
 
@@ -20,15 +21,15 @@
 | # | 文章标题 | 状态 |
 |---|---------|------|
 | 00 | [系列导读：AI 工程师的完整知识地图](./00-intro.md) | ✅ 已完成 |
-| 01 | LLM 是怎么工作的：Token、Attention、采样 | 📝 待写 |
-| 02 | Prompt Engineering：和 LLM 说话的艺术 | 📝 待写 |
-| 03 | 结构化输出：让 AI 的回答变成程序能读的数据 | 📝 待写 |
+| 01 | LLM 是怎么工作的：Token、Attention、采样 | ✅ 已完成 |
+| 02 | Prompt Engineering：和 LLM 说话的艺术 | ✅ 已完成 |
+| 03 | 结构化输出：让 AI 的回答变成程序能读的数据 | ✅ 已完成 |
 
 ### 阶段二：Tool Use + RAG
 
 | # | 文章标题 | 状态 |
 |---|---------|------|
-| 04 | Function Calling：给 AI 插上执行的翅膀 | 📝 待写 |
+| 04 | Function Calling：给 AI 插上执行的翅膀 | ✅ 已完成 |
 | 05 | Embedding 与向量数据库：AI 的长期记忆 | 📝 待写 |
 | 06 | RAG 实战：给 AI 接上你的私有知识库 | 📝 待写 |
 | 07 | RAG 进阶：Chunking、Hybrid Search、Reranking | 📝 待写 |
@@ -41,18 +42,21 @@
 | 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | 📝 待写 |
 | 10 | MCP 协议：工具集成的统一标准 | 📝 待写 |
 | 11 | 动手写一个 MCP Server | 📝 待写 |
-| 12 | A2A：让多个 Agent 组成团队 | 📝 待写 |
+| 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | 📝 待写 |
+| 13 | Agent Skills：用自然语言给 Agent 注入专业能力 | 📝 待写 |
+| 14 | MCP、Plugin、Skills：三种集成方式怎么选 | 📝 待写 |
+| 15 | A2A：让多个 Agent 组成团队 | 📝 待写 |
 
 ### 阶段四：全栈整合 + 工程化
 
 | # | 文章标题 | 状态 |
 |---|---------|------|
-| 13 | Context Engineering：在有限空间里装最多价值 | 📝 待写 |
-| 14 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | 📝 待写 |
-| 15 | AI 应用的监控与评估：LangFuse + RAGAS | 📝 待写 |
-| 16 | Guardrails：给 AI 装上安全护栏 | 📝 待写 |
-| 17 | 成本控制：Prompt Caching 和模型路由 | 📝 待写 |
-| 18 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | 📝 待写 |
+| 16 | Context Engineering：在有限空间里装最多价值 | 📝 待写 |
+| 17 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | 📝 待写 |
+| 18 | AI 应用的监控与评估：LangFuse + RAGAS | 📝 待写 |
+| 19 | Guardrails：给 AI 装上安全护栏 | 📝 待写 |
+| 20 | 成本控制：Prompt Caching 和模型路由 | 📝 待写 |
+| 21 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | 📝 待写 |
 
 ---
 

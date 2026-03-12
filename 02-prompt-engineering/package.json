@@ -1,0 +1,19 @@
+{
+  "name": "@ai-series/02-prompt-engineering",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "basics": "tsx src/prompt-basics.ts",
+    "cot": "tsx src/chain-of-thought.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0"
+  }
+}

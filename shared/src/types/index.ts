@@ -57,4 +57,5 @@ export const MODELS = {
   GPT5: 'gpt-5',
   GPT5_MINI: 'gpt-5-mini',
   GPT4O: 'gpt-4o',
+  GPT5_CODEX: 'gpt-5.2-codex',
 } as const

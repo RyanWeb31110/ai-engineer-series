@@ -7,7 +7,7 @@
  * 运行：pnpm tokenizer
  */
 
-import { encoding_for_model } from 'js-tiktoken'
+import { encodingForModel } from 'js-tiktoken'
 
 // ─── 示例文本 ─────────────────────────────────────────────────────────────────
 
@@ -31,21 +31,14 @@ const SAMPLES = [
  * 每个 token 用 [] 包裹，方便肉眼观察
  */
 function visualizeTokens(text: string, modelName: 'gpt-4o' | 'gpt-3.5-turbo' = 'gpt-4o'): void {
-  const enc = encoding_for_model(modelName)
+  const enc = encodingForModel(modelName)
 
   const tokenIds = enc.encode(text)
-  const tokens: string[] = []
-
-  for (const id of tokenIds) {
-    const bytes = enc.decode(new Uint32Array([id]))
-    const str = new TextDecoder().decode(bytes)
-    tokens.push(str)
-  }
-
-  enc.free() // 释放 WASM 内存
+  // decode 每个单独 token 得到字符串
+  const tokens = tokenIds.map((id) => enc.decode([id]))
 
   const count = tokenIds.length
-  // 每个 token 用方括号标注，特殊字符用 · 替代
+  // 每个 token 用方括号标注，特殊字符用符号替代
   const visual = tokens.map((t) => `[${t.replace(/\n/g, '↵').replace(/\t/g, '→')}]`).join('')
 
   console.log(`\n原文 (${text.length} 字符 → ${count} tokens):`)
@@ -60,9 +53,8 @@ function visualizeTokens(text: string, modelName: 'gpt-4o' | 'gpt-3.5-turbo' = '
  * 用于说明"成本估算"的思维方式
  */
 function costEstimate(text: string, pricePerMToken: number = 0.15): void {
-  const enc = encoding_for_model('gpt-4o')
+  const enc = encodingForModel('gpt-4o')
   const tokenCount = enc.encode(text).length
-  enc.free()
 
   const cost = (tokenCount / 1_000_000) * pricePerMToken
   console.log(`\n成本估算 (${tokenCount} tokens @ $${pricePerMToken}/MTok):`)
