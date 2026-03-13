@@ -232,4 +232,6 @@ OpenAI 的 API 支持 `response_format: { type: 'json_schema', json_schema: { ..
 
 ---
 
+*配套代码：[github.com/RyanWeb31110/ai-engineer-series](https://github.com/RyanWeb31110/ai-engineer-series)*
+
 *「AI 工程师实战」系列第 03 篇*

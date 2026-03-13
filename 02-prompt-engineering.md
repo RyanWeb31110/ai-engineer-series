@@ -244,4 +244,6 @@ Prompt 擅长处理模糊性、语义理解、创意生成。规则确定的逻�
 
 ---
 
+*配套代码：[github.com/RyanWeb31110/ai-engineer-series](https://github.com/RyanWeb31110/ai-engineer-series)*
+
 *「AI 工程师实战」系列第 02 篇*

@@ -274,4 +274,6 @@ tiktoken 是 OpenAI 的分词器，Claude 用的是自己的分词器。同一�
 
 ---
 
+*配套代码：[github.com/RyanWeb31110/ai-engineer-series](https://github.com/RyanWeb31110/ai-engineer-series)*
+
 *「AI 工程师实战」系列第 01 篇*

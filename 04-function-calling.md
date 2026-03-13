@@ -415,4 +415,6 @@ if (round >= MAX_ROUNDS) {
 
 ---
 
+*配套代码：[github.com/RyanWeb31110/ai-engineer-series](https://github.com/RyanWeb31110/ai-engineer-series)*
+
 *「AI 工程师实战」系列第 04 篇*

@@ -30,7 +30,7 @@
 | # | 文章标题 | 状态 |
 |---|---------|------|
 | 04 | Function Calling：给 AI 插上执行的翅膀 | ✅ 已完成 |
-| 05 | Embedding 与向量数据库：AI 的长期记忆 | 📝 待写 |
+| 05 | Embedding 与向量数据库：AI 的长期记忆 | ✅ 已完成 |
 | 06 | RAG 实战：给 AI 接上你的私有知识库 | 📝 待写 |
 | 07 | RAG 进阶：Chunking、Hybrid Search、Reranking | 📝 待写 |
 
