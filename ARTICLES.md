@@ -31,7 +31,7 @@
 |---|---------|------|
 | 04 | Function Calling：给 AI 插上执行的翅膀 | ✅ 已完成 |
 | 05 | Embedding 与向量数据库：AI 的长期记忆 | ✅ 已完成 |
-| 06 | RAG 实战：给 AI 接上你的私有知识库 | 📝 待写 |
+| 06 | RAG 实战：给 AI 接上你的私有知识库 | ✅ 已完成 |
 | 07 | RAG 进阶：Chunking、Hybrid Search、Reranking | 📝 待写 |
 
 ### 阶段三：Agent + 协议
