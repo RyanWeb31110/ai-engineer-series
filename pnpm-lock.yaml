@@ -145,6 +145,25 @@ importers:
         specifier: ^5.7.0
         version: 5.9.3
 
+  08-react-agent:
+    dependencies:
+      '@ai-series/shared':
+        specifier: workspace:*
+        version: link:../shared
+      openai:
+        specifier: ^4.104.0
+        version: 4.104.0
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.15
+      tsx:
+        specifier: ^4.19.0
+        version: 4.21.0
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
+
   shared:
     dependencies:
       '@anthropic-ai/sdk':
