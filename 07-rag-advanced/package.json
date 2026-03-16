@@ -1,0 +1,21 @@
+{
+  "name": "@ai-series/07-rag-advanced",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "chunking": "tsx src/chunking.ts",
+    "hybrid-search": "tsx src/hybrid-search.ts",
+    "reranking": "tsx src/reranking.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
