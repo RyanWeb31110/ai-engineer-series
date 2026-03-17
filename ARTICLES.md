@@ -39,7 +39,7 @@
 | # | 文章标题 | 状态 |
 |---|---------|------|
 | 08 | ReAct：让 AI 学会边想边做 | ✅ 已完成 |
-| 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | 📝 待写 |
+| 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | ✅ 已完成 |
 | 10 | MCP 协议：工具集成的统一标准 | 📝 待写 |
 | 11 | 动手写一个 MCP Server | 📝 待写 |
 | 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | 📝 待写 |
