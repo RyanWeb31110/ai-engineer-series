@@ -41,7 +41,7 @@
 | 08 | ReAct：让 AI 学会边想边做 | ✅ 已完成 |
 | 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | ✅ 已完成 |
 | 10 | MCP 协议：工具集成的统一标准 | ✅ 已完成 |
-| 11 | 动手写一个 MCP Server | 📝 待写 |
+| 11 | 动手写一个 MCP Server | ✅ 已完成 |
 | 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | 📝 待写 |
 | 13 | Agent Skills：用自然语言给 Agent 注入专业能力 | 📝 待写 |
 | 14 | MCP、Plugin、Skills：三种集成方式怎么选 | 📝 待写 |

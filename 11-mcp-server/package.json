@@ -1,0 +1,23 @@
+{
+  "name": "@ai-series/11-mcp-server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "tsx src/todo-server.ts",
+    "client": "tsx src/todo-client.ts",
+    "agent": "tsx src/agent-client.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "openai": "^4.77.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
