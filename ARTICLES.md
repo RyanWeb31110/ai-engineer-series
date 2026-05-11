@@ -42,21 +42,21 @@
 | 09 | Agent 实战：用 LangGraph / Mastra 搭任务执行器 | ✅ 已完成 |
 | 10 | MCP 协议：工具集成的统一标准 | ✅ 已完成 |
 | 11 | 动手写一个 MCP Server | ✅ 已完成 |
-| 12 | Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI | 📝 待写 |
-| 13 | Agent Skills：用自然语言给 Agent 注入专业能力 | 📝 待写 |
-| 14 | MCP、Plugin、Skills：三种集成方式怎么选 | 📝 待写 |
-| 15 | A2A：让多个 Agent 组成团队 | 📝 待写 |
+| 12 | [Plugin（GPT Actions）：用 OpenAPI 把服务接入 AI](./12-plugin-openapi.md) | ✅ 已完成 |
+| 13 | [Agent Skills：用自然语言给 Agent 注入专业能力](./13-agent-skills.md) | ✅ 已完成 |
+| 14 | [MCP、Plugin、Skills：三种集成方式怎么选](./14-integration-comparison.md) | ✅ 已完成 |
+| 15 | [A2A：让多个 Agent 组成团队](./15-a2a.md) | ✅ 已完成 |
 
 ### 阶段四：全栈整合 + 工程化
 
 | # | 文章标题 | 状态 |
 |---|---------|------|
-| 16 | Context Engineering：在有限空间里装最多价值 | 📝 待写 |
-| 17 | 用 Next.js + Vercel AI SDK 搭一个 AI 应用 | 📝 待写 |
-| 18 | AI 应用的监控与评估：LangFuse + RAGAS | 📝 待写 |
-| 19 | Guardrails：给 AI 装上安全护栏 | 📝 待写 |
-| 20 | 成本控制：Prompt Caching 和模型路由 | 📝 待写 |
-| 21 | 从 0 到 1：一个完整 AI SaaS 的架构拆解 | 📝 待写 |
+| 16 | [Context Engineering：在有限空间里装最多价值](./16-context-engineering.md) | ✅ 已完成 |
+| 17 | [用 Next.js + Vercel AI SDK 搭一个 AI 应用](./17-fullstack-app.md) | ✅ 已完成 |
+| 18 | [AI 应用的监控与评估：LangFuse + RAGAS](./18-llmops.md) | ✅ 已完成 |
+| 19 | [Guardrails：给 AI 装上安全护栏](./19-guardrails.md) | ✅ 已完成 |
+| 20 | [成本控制：Prompt Caching 和模型路由](./20-cost-control.md) | ✅ 已完成 |
+| 21 | [从 0 到 1：一个完整 AI SaaS 的架构拆解](./21-ai-saas.md) | ✅ 已完成 |
 
 ---
 

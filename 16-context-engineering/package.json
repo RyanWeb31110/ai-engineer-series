@@ -1,10 +1,11 @@
 {
-  "name": "@ai-series/13-context-engineering",
+  "name": "@ai-series/16-context-engineering",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
     "context-demo": "tsx src/context-demo.ts",
+    "compress-history": "tsx src/compress-history.ts",
     "adversarial-verify": "tsx src/adversarial-verify.ts",
     "typecheck": "tsc --noEmit"
   },

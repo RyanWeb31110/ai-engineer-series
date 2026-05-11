@@ -14,7 +14,7 @@ function getAnthropic(): Anthropic {
 
     // 中转站通常由 Cloudflare 代理，需过滤 SDK 的指纹 header，只保留必要的鉴权和内容 header
     const customFetch = baseURL
-      ? (url: RequestInfo | URL, init?: RequestInit) => {
+      ? (url: string | URL | Request, init?: RequestInit) => {
           const allowed = new Set(['authorization', 'x-api-key', 'anthropic-version', 'content-type', 'content-length'])
           const src = new Headers(init?.headers ?? {})
           const clean = new Headers()
@@ -131,8 +131,8 @@ async function callOpenAI(messages: Message[], config: LLMConfig): Promise<LLMRe
     messages: openAIMessages,
   })
 
-  const choice = response.choices[0]
-  if (!choice?.message.content) throw new Error('Empty response from OpenAI')
+  const choice = response.choices?.[0]
+  if (!choice?.message.content) throw new Error(`Empty response from OpenAI: ${JSON.stringify(response)}`)
 
   return {
     content: choice.message.content,

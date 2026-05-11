@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-05-08T03-44-33-839Z",
+  "threshold": 0.7,
+  "dataset": 3,
+  "aggregate": {
+    "faithfulness": 1,
+    "answerRelevancy": 0.9866666666666667,
+    "contextPrecision": 1,
+    "contextRecall": 1,
+    "overallScore": 0.9966666666666667,
+    "passRate": 1
+  },
+  "results": [
+    {
+      "caseId": "case-1",
+      "question": "Next.js 15 默认使用什么路由方式",
+      "answer": "App Router。",
+      "faithfulness": 1,
+      "answerRelevancy": 1,
+      "contextPrecision": 1,
+      "contextRecall": 1,
+      "overallScore": 1
+    },
+    {
+      "caseId": "case-2",
+      "question": "Tailwind CSS v4 相比 v3 有什么性能提升",
+      "answer": "构建速度提升 10 倍以上。",
+      "faithfulness": 1,
+      "answerRelevancy": 0.96,
+      "contextPrecision": 1,
+      "contextRecall": 1,
+      "overallScore": 0.99
+    },
+    {
+      "caseId": "case-3",
+      "question": "Claude Opus 4.6 支持多大的上下文",
+      "answer": "Claude Opus 4.6 支持 1M 上下文窗口。",
+      "faithfulness": 1,
+      "answerRelevancy": 1,
+      "contextPrecision": 1,
+      "contextRecall": 1,
+      "overallScore": 1
+    }
+  ]
+}

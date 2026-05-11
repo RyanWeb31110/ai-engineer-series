@@ -1,0 +1,20 @@
+{
+  "name": "@ai-series/18-llmops",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "tracer-demo": "tsx src/tracer-demo.ts",
+    "ragas-metrics": "tsx src/ragas-metrics.ts",
+    "evaluation-runner": "tsx src/evaluation-runner.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0"
+  }
+}

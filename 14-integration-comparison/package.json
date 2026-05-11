@@ -1,0 +1,22 @@
+{
+  "name": "@ai-series/14-integration-comparison",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mcp-style": "tsx src/mcp-style.ts",
+    "plugin-style": "tsx src/plugin-style.ts",
+    "skill-style": "tsx src/skill-style.ts",
+    "decision-tree": "tsx src/decision-tree.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,5 +1,5 @@
 /**
- * 13-context-engineering / context-demo.ts
+ * 16-context-engineering / context-demo.ts
  *
  * 演示 Context 污染 vs 精确 Context 的实际效果差异
  * 对应文章：《Context Engineering：在有限空间里装最多价值》
@@ -99,7 +99,7 @@ async function demonstrateResearchThenImplement(): Promise<void> {
 
   console.log('Step 1 — 研究阶段（探索 3 种方案）:')
   const researchResult = await chat(researchMessages, {
-    model: MODELS.CLAUDE_HAIKU,
+    model: MODELS.GPT5_CODEX,
     maxTokens: 400,
     temperature: 0.3,
   })
@@ -121,7 +121,7 @@ async function demonstrateResearchThenImplement(): Promise<void> {
   ]
 
   const implementResult = await chat(implementMessages, {
-    model: MODELS.CLAUDE_HAIKU,
+    model: MODELS.GPT5_CODEX,
     maxTokens: 400,
     temperature: 0,
   })
@@ -142,10 +142,8 @@ console.log('='.repeat(60))
 console.log('\n【实验 1 vs 2：Context 污染 vs 精确 Context】')
 console.log('任务：给 add(a, b) 函数写单测\n')
 
-const [pollutedResult, cleanResult] = await Promise.all([
-  chat(POLLUTED_MESSAGES, { model: MODELS.CLAUDE_HAIKU, maxTokens: 300, temperature: 0 }),
-  chat(CLEAN_MESSAGES, { model: MODELS.CLAUDE_HAIKU, maxTokens: 300, temperature: 0 }),
-])
+const pollutedResult = await chat(POLLUTED_MESSAGES, { model: MODELS.GPT5_CODEX, maxTokens: 300, temperature: 0 })
+const cleanResult = await chat(CLEAN_MESSAGES, { model: MODELS.GPT5_CODEX, maxTokens: 300, temperature: 0 })
 
 console.log('--- 污染 Context 的输出 ---')
 console.log(pollutedResult.content)

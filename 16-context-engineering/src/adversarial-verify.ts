@@ -1,5 +1,5 @@
 /**
- * 13-context-engineering / adversarial-verify.ts
+ * 16-context-engineering / adversarial-verify.ts
  *
  * 对抗验证模式（Adversarial Verification Pattern）
  *
@@ -19,7 +19,24 @@
  */
 
 import { chat, MODELS } from '@ai-series/shared'
-import type { Message } from '@ai-series/shared'
+import type { Message, LLMConfig } from '@ai-series/shared'
+
+// 简易重试包装：中转站偶尔返回空响应，重试 1 次
+async function chatWithRetry(
+  messages: Message[],
+  config: LLMConfig,
+): Promise<Awaited<ReturnType<typeof chat>>> {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      return await chat(messages, config)
+    } catch (err) {
+      if (attempt === 2) throw err
+      console.log(`[Retry] API call failed, retrying in ${(attempt + 1) * 2}s...`)
+      await new Promise(r => setTimeout(r, (attempt + 1) * 2000))
+    }
+  }
+  throw new Error('Unreachable')
+}
 
 // 加载 .env
 const dotenvPath = new URL('../.env', import.meta.url).pathname
@@ -96,8 +113,8 @@ ${SCORING_GUIDE}
     },
   ]
 
-  const result = await chat(messages, {
-    model: MODELS.CLAUDE_HAIKU,
+  const result = await chatWithRetry(messages, {
+    model: MODELS.GPT5_CODEX,
     maxTokens: 600,
     temperature: 0.3,
   })
@@ -141,8 +158,8 @@ ${findings}`,
     },
   ]
 
-  const result = await chat(messages, {
-    model: MODELS.CLAUDE_HAIKU,
+  const result = await chatWithRetry(messages, {
+    model: MODELS.GPT5_CODEX,
     maxTokens: 500,
     temperature: 0.3,
   })
@@ -191,8 +208,8 @@ ${rebuttal}`,
     },
   ]
 
-  const result = await chat(messages, {
-    model: MODELS.CLAUDE_SONNET, // 裁判用更强的模型
+  const result = await chatWithRetry(messages, {
+    model: MODELS.GPT5_CODEX, // 裁判用更强的模型
     maxTokens: 700,
     temperature: 0,
   })

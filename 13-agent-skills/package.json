@@ -1,0 +1,21 @@
+{
+  "name": "@ai-series/13-agent-skills",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "basic": "tsx src/basic-skill.ts",
+    "router": "tsx src/skill-router.ts",
+    "compose": "tsx src/skill-compose.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-series/shared": "workspace:*",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
